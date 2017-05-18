@@ -14,7 +14,14 @@ public class SortAlgorithmsTest {
         TestUtil.printArray(insertionSort);
     }
 
+    public static void mergeTest(){
+        TestUtil.printArray(TestUtil.B);
+        int[] merge = SortAlgorithms.merge(TestUtil.B, 0, 3, 8);
+        TestUtil.printArray(merge);
+    }
+
     public static void main(String[] args) {
-        SortAlgorithmsTest.insertionSortTest();
+//        SortAlgorithmsTest.insertionSortTest();
+        mergeTest();
     }
 }
