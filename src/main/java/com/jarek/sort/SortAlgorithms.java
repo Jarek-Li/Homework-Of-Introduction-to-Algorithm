@@ -65,19 +65,24 @@ public class SortAlgorithms {
      * @return
      */
     public static int[] mergeSort(int[] A, int q, int r) {
-        int p = (q + r) / 2;
-        mergeSort(A, q, p);
-        mergeSort(A, p + 1, r);
-        return merge(A, q, p, r);
+        if (q < r) {
+            int p = (q + r) / 2;
+            mergeSort(A, q, p);
+            mergeSort(A, p + 1, r);
+            return merge(A, q, p, r);
+        } else {
+            return A;
+        }
+
     }
 
     /**
      * 归并排序数组 A
+     *
      * @param A 待排序数组
      * @return A 已排好序
      */
     public static int[] mergeSort(int[] A) {
         return mergeSort(A, 0, A.length);
-
     }
 }

@@ -20,8 +20,16 @@ public class SortAlgorithmsTest {
         TestUtil.printArray(merge);
     }
 
+    public static void mergeSortTest(){
+        int[] A = {1, 5, 3, 10, 2, 9, 2, 19};
+        TestUtil.printArray(TestUtil.A );
+        int[] ints = SortAlgorithms.mergeSort(A,0,3);
+        TestUtil.printArray(ints);
+    }
+
     public static void main(String[] args) {
 //        SortAlgorithmsTest.insertionSortTest();
-        mergeTest();
+//        mergeTest();
+        mergeSortTest();
     }
 }
